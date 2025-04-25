@@ -1,0 +1,29 @@
+name: firebase_app_check_custom
+description: A fork of firebase_app_check with enhanced debug token support allowing custom debug tokens via parameters or environment variables.
+homepage: https://github.com/yourusername/firebase_app_check_custom
+repository: https://github.com/yourusername/firebase_app_check_custom
+version: 0.1.0
+topics:
+  - firebase
+  - app-check
+  - security
+  - protection
+  - debug
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+  flutter: '>=3.3.0'
+
+dependencies:
+  firebase_app_check_platform_interface: ^0.1.1+5
+  firebase_app_check_web: ^0.2.0+9
+  firebase_core: ^3.13.0
+  firebase_core_platform_interface: ^5.3.1
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  async: ^2.5.0
+  flutter_test:
+    sdk: flutter
+  mockito: ^5.0.0
