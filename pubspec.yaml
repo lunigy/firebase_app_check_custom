@@ -10,6 +10,12 @@ topics:
   - protection
   - debug
 
+# Ignore false positive API key leaks in example files
+false_secrets:
+  - '/example/**/*.json'
+  - '/example/**/*.plist'
+  - '/example/**/firebase_options.dart'
+
 environment:
   sdk: '>=3.2.0 <4.0.0'
   flutter: '>=3.3.0'

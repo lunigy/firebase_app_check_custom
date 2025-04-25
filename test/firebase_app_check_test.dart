@@ -5,7 +5,7 @@
 import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:firebase_app_check/firebase_app_check.dart';
+import 'package:firebase_app_check_custom/firebase_app_check_custom.dart';
 import 'package:firebase_core/firebase_core.dart';
 import './mock.dart';
 

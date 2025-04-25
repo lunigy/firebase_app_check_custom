@@ -3,7 +3,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-part of '../firebase_app_check.dart';
+part of '../firebase_app_check_custom.dart';
 
 class FirebaseAppCheck extends FirebasePluginPlatform {
   static Map<String, FirebaseAppCheck> _firebaseAppCheckInstances = {};
@@ -66,11 +66,15 @@ class FirebaseAppCheck extends FirebasePluginPlatform {
     AppleProvider appleProvider = AppleProvider.deviceCheck,
     String? customDebugToken,
   }) {
+    // Store custom debug token in native platforms via method channel
+    if (customDebugToken != null && customDebugToken.isNotEmpty) {
+      FirebasePlatform.instance.app(app.name).sendPlatformEvent({'type': 'app-check-debug-token', 'token': customDebugToken});
+    }
+    
     return _delegate.activate(
       webProvider: webProvider,
       androidProvider: androidProvider,
       appleProvider: appleProvider,
-      customDebugToken: customDebugToken,
     );
   }
 
