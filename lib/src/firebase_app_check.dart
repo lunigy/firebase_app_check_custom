@@ -3,8 +3,6 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'dart:io' show Platform;
-
 part of '../firebase_app_check_custom.dart';
 
 class FirebaseAppCheck extends FirebasePluginPlatform {
