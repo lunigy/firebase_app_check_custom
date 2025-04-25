@@ -3,9 +3,17 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'dart:io' show Platform;
+
 part of '../firebase_app_check_custom.dart';
 
 class FirebaseAppCheck extends FirebasePluginPlatform {
+  /// Internal storage for custom debug token (used when the platform interface doesn't support it directly)
+  static String? _customDebugToken;
+  
+  /// Get the current custom debug token if available
+  static String? get customDebugToken => _customDebugToken;
+  
   static Map<String, FirebaseAppCheck> _firebaseAppCheckInstances = {};
 
   FirebaseAppCheck._({required this.app})
@@ -66,9 +74,12 @@ class FirebaseAppCheck extends FirebasePluginPlatform {
     AppleProvider appleProvider = AppleProvider.deviceCheck,
     String? customDebugToken,
   }) {
-    // Store custom debug token in native platforms via method channel
+    // Store custom debug token for native code
+    // Note: We can't directly modify Platform.environment as it's read-only
+    // Instead, we'll store the token in a static variable that our modified
+    // method channel implementation will check before checking the environment
     if (customDebugToken != null && customDebugToken.isNotEmpty) {
-      FirebasePlatform.instance.app(app.name).sendPlatformEvent({'type': 'app-check-debug-token', 'token': customDebugToken});
+      FirebaseAppCheck._customDebugToken = customDebugToken;
     }
     
     return _delegate.activate(
