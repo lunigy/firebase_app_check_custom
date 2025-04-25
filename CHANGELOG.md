@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.4
+
+- Critical fix: Implemented direct method channel registration for iOS and macOS
+- Resolved persistent MissingPluginException issue with complete channel registration
+- Fixed plugin communication between Flutter and native platforms
+- Ensured proper registration for Firebase App Check methods on iOS/macOS
+
 ## 0.1.3
 
 - Fixed iOS and macOS plugin registration to properly handle method channel integration
