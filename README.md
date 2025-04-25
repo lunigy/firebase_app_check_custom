@@ -6,7 +6,7 @@ This package is a **fork** of the official [Firebase App Check](https://pub.dev/
 
 ## Version Information
 
-- **Current Version**: 0.1.1
+- **Current Version**: 0.1.3
 - **Based on**: firebase_app_check 0.3.2+5
 
 Note that this package uses its own versioning scheme, starting at 0.1.0, while the original package is at version 0.3.2+5. Features and fixes from the original package will be incorporated into this fork as they become available.

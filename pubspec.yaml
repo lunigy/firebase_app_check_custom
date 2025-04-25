@@ -2,7 +2,7 @@ name: firebase_app_check_custom
 description: A fork of firebase_app_check with enhanced debug token support allowing custom debug tokens via parameters or environment variables.
 homepage: https://github.com/lunigy/firebase_app_check_custom
 repository: https://github.com/lunigy/firebase_app_check_custom
-version: 0.1.1
+version: 0.1.3
 topics:
   - firebase
   - app-check

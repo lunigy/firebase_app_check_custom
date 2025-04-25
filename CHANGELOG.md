@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.3
+
+- Fixed iOS and macOS plugin registration to properly handle method channel integration
+- Added proper Flutter plugin registration files to ensure automatic plugin loading
+- Completely resolved MissingPluginException without requiring client-side workarounds
+- Improved package structure following Flutter plugin best practices
+
+## 0.1.2
+
+- Fixed iOS and macOS implementation by adding properly named podspec files
+- Resolved MissingPluginException for Firebase App Check methods on iOS/macOS platforms
+- Improved cross-platform compatibility
+
 ## 0.1.1
 
 - Fixed plugin registration and import issues to ensure proper functionality
