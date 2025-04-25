@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1
+
+- Fixed plugin registration and import issues to ensure proper functionality
+- Updated example app to properly use the custom implementation
+- Improved documentation
+
 ## 0.1.0
 
 This is the initial release of `firebase_app_check_custom`, a fork of `firebase_app_check` (version 0.3.2+5) with enhanced debug token support.
